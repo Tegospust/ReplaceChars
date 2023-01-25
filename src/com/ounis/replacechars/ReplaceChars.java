@@ -51,11 +51,20 @@ public class ReplaceChars {
         
         Scanner scnr = new Scanner(System.in);
         
-        int value = -1;
-        if (scnr != null) 
-            value = scnr.nextInt();
+        String input;
+//        if (scnr != null) 
+        input = scnr.next();
         
-        
+
+//        System.out.println(input);
+        int value;
+        try {
+            value = Integer.parseInt(input);
+        }
+        catch (NumberFormatException nfe) {
+            value = -1;
+            System.err.println(input);
+        }
         
         //JOptionPane.showMessageDialog(null, value);
         
@@ -79,7 +88,7 @@ public class ReplaceChars {
                         }
                     });
                     break;
-
+            default: JOptionPane.showMessageDialog(null,"Nic? Szkoda...");
         }
         
 

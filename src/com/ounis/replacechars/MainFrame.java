@@ -11,15 +11,17 @@ import java.awt.Point;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 import javax.swing.text.AbstractDocument;
 
+//git token: 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
 /**
  *
  * @author AndroidAppsPlatform
  */
-public class MainFrame extends javax.swing.JFrame implements ActionListener {
+public class MainFrame extends JFrame implements ActionListener {
 
     String[] aSpecialChars = {".", "^"};
 
@@ -133,7 +135,7 @@ public class MainFrame extends javax.swing.JFrame implements ActionListener {
         
 //        btnGO.addActionListener(this);
 //        btnTwist.addActionListener(this);
-        btnGO.addActionListener(new btnGoClick());
+          btnGO.addActionListener(new btnGoClick());
 //                new ActionListener() {
 //            @Override
 //            public void actionPerformed(ActionEvent e) {
@@ -301,7 +303,7 @@ public class MainFrame extends javax.swing.JFrame implements ActionListener {
     
     //obsługa kliknięcia przycisku btnGO
     class btnGoClick implements ActionListener {
-
+        
         @Override
         public void actionPerformed(ActionEvent e) {
             //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -313,7 +315,7 @@ public class MainFrame extends javax.swing.JFrame implements ActionListener {
                               edCharToReplace.getText());
                 edSrcString.setText(str);
                 
-                //JOptionPane.showMessageDialog(MainFrame.this, "lalalala");
+                JOptionPane.showMessageDialog(null,"Poszło...");
                 
             //};
             
